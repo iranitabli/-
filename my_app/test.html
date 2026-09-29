@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>تست</title>
+</head>
+<body>
+  <button onclick="testSave()">ذخیره تست</button>
+  <button onclick="testLoad()">نمایش تست</button>
+  <div id="result"></div>
+
+  <script>
+    function testSave() {
+      fetch("http://localhost:8000/lessons", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: 1, name: "تست", topic: "تست", date: "2026-01-01" })
+      }).then(function(res) {
+        document.getElementById("result").innerHTML = "ذخیره شد!";
+      }).catch(function(err) {
+        document.getElementById("result").innerHTML = "خطا: " + err;
+      });
+    }
+
+    function testLoad() {
+      fetch("http://localhost:8000/lessons")
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          document.getElementById("result").innerHTML = JSON.stringify(data);
+        }).catch(function(err) {
+          document.getElementById("result").innerHTML = "خطا: " + err;
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود | زمان‌های طلایی</title>
+  <style>
+    body { font-family: Tahoma; background: #f5f5f5; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 320px; }
+    input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; }
+    h2 { text-align: center; color: #333; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>ورود به حساب</h2>
+    <input id="login-username" placeholder="نام کاربری">
+    <input id="login-password" type="password" placeholder="رمز عبور">
+    <button onclick="login()">ورود</button>
+    <hr>
+    <h2>ثبت‌نام</h2>
+    <input id="reg-username" placeholder="نام کاربری جدید">
+    <input id="reg-password" type="password" placeholder="رمز عبور جدید">
+    <button onclick="register()">ثبت‌نام</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

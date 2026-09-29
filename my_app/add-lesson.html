@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>افزودن درس جدید</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>➕ افزودن درس جدید</h1>
+    <p>درس جدیدت رو ثبت کن</p>
+  </header>
+
+  <div class="modal-content add-page">
+    <label>نام درس *</label>
+    <input type="text" id="lesson-name" placeholder="مثلاً ریاضی">
+
+    <label>موضوع *</label>
+    <input type="text" id="lesson-topic" placeholder="مثلاً فصل ۳">
+
+    <label>تاریخ یادگیری * (میلادی)</label>
+    <input type="date" id="lesson-date">
+
+    <label>سوال (اختیاری)</label>
+    <textarea id="lesson-question" placeholder="سوالی که موقع مرور پرسیده بشه..."></textarea>
+
+    <div class="modal-actions">
+      <button onclick="saveAndExit()">ثبت و خروج</button>
+      <button onclick="window.location.href='index.html'" class="btn-cancel">انصراف</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
